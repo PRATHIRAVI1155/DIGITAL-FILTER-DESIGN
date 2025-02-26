@@ -1,0 +1,17 @@
+[2025-02-26 13:28:16 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+VCD info: dumpfile fir_filter.vcd opened for output.
+Time=0 | x_in=   0 | y_out=   0
+Time=20000 | x_in=  10 | y_out=   0
+Time=30000 | x_in=  20 | y_out=   0
+Time=35000 | x_in=  20 | y_out=   3
+Time=40000 | x_in=  30 | y_out=   3
+Time=45000 | x_in=  30 | y_out=  10
+Time=50000 | x_in=  40 | y_out=  10
+Time=55000 | x_in=  40 | y_out=  20
+Time=60000 | x_in=  50 | y_out=  20
+Time=65000 | x_in=  50 | y_out=  30
+Time=75000 | x_in=  50 | y_out=  40
+Time=85000 | x_in=  50 | y_out=  46
+Time=95000 | x_in=  50 | y_out=  50
+testbench.sv:35: $finish called at 110000 (1ps)
+Done
