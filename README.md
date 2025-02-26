@@ -1,5 +1,17 @@
 # DIGITAL-FILTER-DESIGN
 
+COMPANY NAME : CODTECH IT SOLUTIONS
+
+ NAME : PRATHIKSHA R
+
+ INTERN ID : CT08RWF
+
+ DOMAIN : VLSI
+
+DURATION : 4 WEEKS
+
+MENTOR : NEELA SANTHOSH KUMAR
+
 Performance Analysis of FIR Filter on EDA Playground
 Introduction
 In this project, we designed and simulated a Finite Impulse Response (FIR) filter using Verilog on EDA Playground, an online HDL simulation platform. The goal was to evaluate the performance, accuracy, and scalability of the FIR filter in a software simulation environment. Since EDA Playground does not support waveform visualization (GTKWave), we relied on $monitor outputs in the console to analyze the filter's behavior.
