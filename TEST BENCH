@@ -1,0 +1,41 @@
+`timescale 1ns/1ps
+
+module FIR_Filter_tb;
+
+    reg clk, rst;
+    reg signed [7:0] x_in;
+    wire signed [7:0] y_out;
+
+    // Instantiate FIR filter module
+    FIR_Filter #(.WIDTH(8)) fir_filter (
+        .clk(clk),
+        .rst(rst),
+        .x_in(x_in),
+        .y_out(y_out)
+    );
+
+    // Clock Generation (10ns period)
+    always #5 clk = ~clk;
+
+    // Test sequence
+    initial begin
+        $dumpfile("fir_filter.vcd");  // Save waveform data
+        $dumpvars(0, FIR_Filter_tb);  // Dump all signals for waveform
+
+        clk = 0;
+        rst = 1;
+        x_in = 0;
+
+        #10 rst = 0;  // Release reset
+        #10 x_in = 8'd10;
+        #10 x_in = 8'd20;
+        #10 x_in = 8'd30;
+        #10 x_in = 8'd40;
+        #10 x_in = 8'd50;
+        #50 $finish;  // End simulation
+    end
+
+    // ✅ Add $monitor here to print simulation results in terminal
+    initial begin
+        $monitor("Time=%0t | x_in=%d | y_out=%d", $time, x_in, y_out);
+    end
