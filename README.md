@@ -58,3 +58,6 @@ Key Observations:
 ✅ EDA Playground successfully simulates up to 16-tap FIR filters without issues.
 ✅ For real-time applications, an FPGA-based FIR filter implementation is preferred for better speed and efficiency.
 
+OUTPUT : ![Image](https://github.com/user-attachments/assets/30a4f444-bca1-41db-aedb-b3f3cdad54a0)
+
+
